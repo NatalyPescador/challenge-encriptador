@@ -1,0 +1,169 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f5fc;
+}
+
+.main_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.first_container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem;
+}
+
+form {
+    width: 100%;
+    height: 70vh;
+}
+
+.texto {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #f3f5fc;
+    color: #0A3871;
+    font-size: 2rem;
+}
+
+.texto::placeholder {
+    color: #0A3871;
+}
+
+.texto:focus {
+    outline: none;
+}
+
+.botones {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.encriptar, 
+.desencriptar {
+    width: 300px;
+    height: 60px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.encriptar {
+    background-color: #0A3871;
+    color: #ffffff;
+}
+
+.desencriptar {
+    background-color: #f3f5fc;
+    color: #0A3871;
+}
+
+.encriptar:hover, 
+.desencriptar:hover {
+    transform: scale(1.02);
+}
+
+.second_container {
+    width: 90%;
+}
+
+.mensaje {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.copiar {
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+    background-color: #ffffff;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.copiar:hover {
+    transform: scale(1.02);
+}
+
+@media screen and (max-width:699px) {
+    .muñeco {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+
+@media screen and (min-width:700px) and (max-width:900px) {
+    .botones {
+        flex-direction: row;
+    }
+
+    .muñeco {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .main_container {
+        flex-direction: row;
+    }
+
+    .first_container {
+        width: 75%;
+    }
+
+    form {
+        width: 80%;
+        align-self: center;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    .second_container {
+        width: 25%;
+        margin-right: 1rem;
+    }
+
+    .mensaje {
+        height: 600px;
+    }
+
+    .botones {
+        flex-direction: row;
+    }
+
+    .muñeco {
+        width: 100%;
+    }
+
+    .muñeco img {
+        width: 100%;
+    }
+
+}
